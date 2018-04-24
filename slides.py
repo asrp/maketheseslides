@@ -35,10 +35,10 @@ def clear(node_id):
 
 def key_press(event, key_name=None):
     return event.type == Event.key_press and\
-        (key_name is None or (event.key_name == key_name and (not key_name.isalpha or "Shift" not in event.mods)))
+        (key_name is None or (event.key_name == key_name and (not key_name.isalpha or "shift" not in event.mods)))
 
 def shift_key_press(event, key_name=None):
-    return event.type == Event.key_press and "Shift" in event.mods and\
+    return event.type == Event.key_press and "shift" in event.mods and\
         (key_name is None or event.key_name.lower() == key_name)
 
 def run_button():
@@ -384,12 +384,12 @@ def scroll(axis_side):
 
 def shift_mouse_press(event, button=None):
     return event.type == Event.mouse_press and\
-           "Shift" in event.mods and\
+           "shift" in event.mods and\
            (button is None or event.button == int(button))
 
 def control_mouse_press(event, button=None):
     return event.type == Event.mouse_press and\
-           "Control" in event.mods and\
+           "control" in event.mods and\
            (button is None or event.button == int(button))
 
 def zoom(out):
@@ -737,8 +737,8 @@ gui_select = mouse_press(3) !gui_select mouse_release(3)
 undo = key_press(z) !doc_undo ?fail
 redo = shift_key_press(z) !doc_redo ?fail
 paste = key_press(c) !paste_selection
-next_slide = (key_press(Page_Down) | key_press(Next)) !change_slide(1)
-prev_slide = (key_press(Page_Up) | key_press(Prior)) !change_slide(-1)
+next_slide = (key_press(page_down) | key_press(next)) !change_slide(1)
+prev_slide = (key_press(page_up) | key_press(prior)) !change_slide(-1)
 move_to_layer = shift_key_press(m) !move_to_layer
 toggle_ui_layer = key_press(i) !toggle_ui_layer
 toggle_ui_visible = shift_key_press(i) !toggle_ui_visible
@@ -746,9 +746,9 @@ enter_selection = shift_key_press(s) !enter_selection
 exit_selection = shift_key_press(a) !exit_selection
 font_increase = shift_key_press(equal) !font_change
 font_decrease = key_press(minus) !font_change(0.83)
-transition_forward = key_press(Right) !slide_transition
-transition_back    = key_press(Left) !slide_transition(-1)
-empty_selection = key_press(Escape) !empty_selection
+transition_forward = key_press(right) !slide_transition
+transition_back    = key_press(left) !slide_transition(-1)
+empty_selection = key_press(escape) !empty_selection
 toggle_skip_points = shift_key_press(p) !toggle_skip_points
 
 command = @button | @text | @move_point | @new_line | @new_rect

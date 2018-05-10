@@ -18,7 +18,7 @@ pdocument.scope = {"P": P, "cur_time": cur_time, "transformed": transformed}
 
 def add_letter(node_id=None):
     node_id = node_id if node_id is not None else doc["editor.focus"]
-    if doc["editor.key_name"] == "BackSpace":
+    if doc["editor.key_name"] == "backspace":
         doc[node_id + ".value"] = doc[node_id + ".value"][:-1]
     else:
         doc[node_id + ".value"] += doc["editor.key_char"]
@@ -703,13 +703,13 @@ if __init__:
     doc.sync()
 
 input_callbacks = """
-exec = key_press(Return)
-       (~key_press(Return) (key_press !add_letter(console) | @anything))*
-       key_press(Return) !run_text(console) !clear(console)
+exec = key_press(return)
+       (~key_press(return) (key_press !add_letter(console) | @anything))*
+       key_press(return) !run_text(console) !clear(console)
 button = mouse_press(1) ?run_button mouse_release(1)
 text = key_press(t) (?edit_text | !create_text)
-       (~key_press(Return) (key_press !add_letter | @anything))*
-       key_press(Return) !finished_edit_text
+       (~key_press(return) (key_press !add_letter | @anything))*
+       key_press(return) !finished_edit_text
 move_point = key_press(e) ?grab_point (~key_press(e) @anything)* key_press(e) !drop_point
 new_line = key_press(l) !add_line
 new_rect = key_press(r) !add_rectangle

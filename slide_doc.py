@@ -3,55 +3,55 @@ from numpy import array
 from const import P, exr, exc
 from persistent_doc.document import pmap
 import node
-node.node_num = 557066
+node.node_num = 559614
 root = Node("group", id='root', children = [
   Node("group", id='references', children = [
-    Node("arc", radius=5, fill_color=(0, 0, 0.5), id='point_icon', p_center=P(0, 0))]),
+    Node("arc", id='point_icon', radius=5, fill_color=(0, 0, 0.5), p_center=P(0, 0))]),
   Node("group", skip_points=True, transforms={'zoom': ('scale', array([ 1.,  1.])), 'scroll_xy': ('translate', array([ 0.,  0.]))}, id='drawing', children = [
     Node("group", visible=False, id='custom_ui', children = [
-      Node("text", value=exr('`selection.root'), id='n_14', p_botleft=P(39.0, 579.0)),
+      Node("text", id='n_14', value=exr('`selection.root'), p_botleft=P(39.0, 579.0)),
       Node("text", id='n_1682', value=u'!doc.save()', on_click=u'doc.save()', p_botleft=P(206.0, 534.0)),
       Node("text", id='n_1684', value=u'!doc.load()', on_click=u'doc.load()', p_botleft=P(208.0, 578.0)),
-      Node("text", id='n_3245', value=u"!add_slide(doc['editor.slide'])", font_size=16.599999999999998, on_click=u"add_slide(doc['editor.slide'])", p_botleft=P(390.0, 609.0)),
+      Node("text", value=u"!add_slide(doc['editor.slide'])", id='n_3245', on_click=u"add_slide(doc['editor.slide'])", font_size=16.599999999999998, p_botleft=P(390.0, 609.0)),
       Node("text", transforms={'move': ('translate', array([269, 131]))}, value=u'!font_face_change("monospace")', id='n_1876', on_click=u'font_face_change("monospace")', font_size=16.599999999999998, p_botleft=P(121.0, 555.0)),
       Node("text", transforms={'move': ('translate', array([266, 147]))}, value=u'!font_face_change(None)', id='n_51', on_click=u'font_face_change(None)', font_size=16.599999999999998, p_botleft=P(134.0, 576.0)),
-      Node("text", id='n_17784', value=u'!add_slide()', font_size=16.599999999999998, on_click=u'add_slide()', p_botleft=P(392.0, 649.0)),
-      Node("text", id='n_40800', value=u'!center_title()', font_size=16.599999999999998, on_click=u'center_title()', p_botleft=P(30.0, 531.0)),
-      Node("text", id='n_179255', value=u'!paste_styled()', font_size=16.599999999999998, on_click=u'paste_styled()', p_botleft=P(64.0, 633.0)),
-      Node("text", id='n_179327', value=u'!bullet_points_align()', font_size=16.599999999999998, on_click=u'bullet_points_align()', p_botleft=P(522.0, 524.0)),
-      Node("text", font_size=12.0, value='![simplify_transform(node) for node in selected_nodes()]', stroke_color=(0, 0, 1), on_click='[simplify_transform(node) for node in selected_nodes()]', font_face=None, id='n_188258', p_botleft=P(384.0, 548.0)),
-      Node("text", font_size=12.0, value='!distribute(selected_nodes(), axis=1, spacing=12)', stroke_color=(0, 0, 1), on_click='distribute(selected_nodes(), axis=1, spacing=12)', font_face=None, id='n_188732', p_botleft=P(384.0, 574.0)),
-      Node("text", id='n_251990', value=u'!make_blue()', font_size=16.599999999999998, on_click=u'make_blue()', p_botleft=P(71.0, 684.0)),
-      Node("text", id='n_473132', value=u'!add_appear_transition()', font_size=16.599999999999998, on_click=u'add_appear_transition()', p_botleft=P(23.0, 507.0)),
-      Node("text", id='n_473157', value=u"!doc[doc['editor.slide']]['max_t'] = 0", font_size=16.599999999999998, on_click=u"doc[doc['editor.slide']]['max_t'] = 0", p_botleft=P(39.0, 771.0)),
-      Node("text", id='n_496662', value=u'!make_green()', font_size=16.599999999999998, on_click=u'make_green()', p_botleft=P(67.0, 723.0)),
-      Node("text", id='n_536436', value="!print_all_text(doc[doc['editor.slide']])", font_size=16.599999999999998, on_click="print_all_text(doc[doc['editor.slide']])", p_botleft=P(69.0, 811.0))]),
+      Node("text", value=u'!add_slide()', id='n_17784', on_click=u'add_slide()', font_size=16.599999999999998, p_botleft=P(392.0, 649.0)),
+      Node("text", value=u'!center_title()', id='n_40800', on_click=u'center_title()', font_size=16.599999999999998, p_botleft=P(30.0, 531.0)),
+      Node("text", value=u'!paste_styled()', id='n_179255', on_click=u'paste_styled()', font_size=16.599999999999998, p_botleft=P(64.0, 633.0)),
+      Node("text", value=u'!bullet_points_align()', id='n_179327', on_click=u'bullet_points_align()', font_size=16.599999999999998, p_botleft=P(522.0, 524.0)),
+      Node("text", font_size=12.0, stroke_color=(0, 0, 1), font_face=None, id='n_188258', value='![simplify_transform(node) for node in selected_nodes()]', on_click='[simplify_transform(node) for node in selected_nodes()]', p_botleft=P(384.0, 548.0)),
+      Node("text", font_size=12.0, stroke_color=(0, 0, 1), font_face=None, id='n_188732', value='!distribute(selected_nodes(), axis=1, spacing=12)', on_click='distribute(selected_nodes(), axis=1, spacing=12)', p_botleft=P(384.0, 574.0)),
+      Node("text", value=u'!make_blue()', id='n_251990', on_click=u'make_blue()', font_size=16.599999999999998, p_botleft=P(71.0, 684.0)),
+      Node("text", value=u'!add_appear_transition()', id='n_473132', on_click=u'add_appear_transition()', font_size=16.599999999999998, p_botleft=P(23.0, 507.0)),
+      Node("text", value=u"!doc[doc['editor.slide']]['max_t'] = 0", id='n_473157', on_click=u"doc[doc['editor.slide']]['max_t'] = 0", font_size=16.599999999999998, p_botleft=P(39.0, 771.0)),
+      Node("text", value=u'!make_green()', id='n_496662', on_click=u'make_green()', font_size=16.599999999999998, p_botleft=P(67.0, 723.0)),
+      Node("text", value="!print_all_text(doc[doc['editor.slide']])", id='n_536436', on_click="print_all_text(doc[doc['editor.slide']])", font_size=16.599999999999998, p_botleft=P(69.0, 811.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide1', children = [
       Node("group", id='n_1953', auto_layout=True, transforms={'move': ('translate', array([-78, -33]))}, side=0, axis=1, children = [
         Node("text", transforms={'align': ('translate', array([-11.,   0.])), 'distribute': ('translate', array([ 0.,  0.]))}, id='n_1686', value=u'How to', font_size=59.242878074879975, p_botleft=P(213.0, 196.0)),
         Node("text", transforms={'align': ('translate', array([-10.,   0.])), 'distribute': ('translate', array([  0.,  32.]))}, id='n_1688', value=u'make these', font_size=59.242878074879975, p_botleft=P(212.0, 242.0)),
         Node("text", transforms={'distribute': ('translate', array([  0.,  60.]))}, id='n_1690', value=u'slides', font_size=59.242878074879975, p_botleft=P(206.0, 292.0))]),
-      Node("text", font_size=16.599999999999998, id='n_3514', value=u'Press Page Down now to go to the next slide', p_botleft=P(90.0, 521.0))]),
+      Node("text", id='n_3514', value=u'Press Page Down now to go to the next slide', font_size=16.599999999999998, p_botleft=P(90.0, 521.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide4', children = [
       Node("text", transforms={'tcenter': ('translate', array([ 18. , -16.5]))}, id='title1', value=u'These slides will teach you', font_size=34.28407295999999, p_botleft=P(42.0, 111.0)),
       Node("text", id='n_4351', value=u'How to make these slides from scratch.', p_botleft=P(30.0, 150.0)),
       Node("text", id='n_4353', value=u'How to make the slide editor itself starting from', p_botleft=P(30.0, 227.0)),
       Node("text", id='n_4385', value=u'a generic template.', p_botleft=P(30.0, 270.0)),
       Node("text", transforms={'move': ('translate', array([-34,   3]))}, id='n_2025_copy0', value=u'Use Page Up and Page Down to change slides', font_size=16.599999999999998, p_botleft=P(123.0, 518.0)),
-      Node("text", transforms={'align': ('translate', array([-1.,  0.]))}, id='n_251802', value=u'First copy functions.py to myslides.py in the examples', p_botleft=P(31.0, 323.0)),
-      Node("text", transforms={'align': ('translate', array([-1.,  0.]))}, id='n_251804', value=u'directory and start (another copy of) guitktk', p_botleft=P(31.0, 366.0)),
+      Node("text", font_size=16.599999999999998, transforms={'align': ('translate', array([-1.,  0.]))}, id='n_251802', value=u'First copy functions.py to myslides.py in the examples/', p_botleft=P(31.0, 323.0)),
+      Node("text", font_size=16.599999999999998, transforms={'align': ('translate', array([-1.,  0.]))}, id='n_251804', value=u'directory and start (another copy of) guitktk', p_botleft=P(31.0, 366.0)),
       Node("text", font_size=16.599999999999998, value=u'python flow_editor.py examples/myslides.py', stroke_color=(0, 0, 1), font_face='monospace', id='n_251806', p_botleft=P(73.0, 408.0)),
-      Node("text", font_size=16.599999999999998, transforms={'align': ('translate', array([-1.,  0.]))}, id='n_484228', value=u'(Separately) open examples/myslides.py in a text editor.', p_botleft=P(31.0, 459.0)),
+      Node("text", transforms={'align': ('translate', array([-1.,  0.]))}, id='n_484228', value=u'Separately, open examples/myslides.py in a text editor.', font_size=16.599999999999998, p_botleft=P(31.0, 459.0)),
       Node("text", id='n_540100', value='(Yes, the ones you are reading now!)', font_size=13.777999999999997, p_botleft=P(30.0, 184.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide9', children = [
       Node("group", fill_color=(0.9, 0.9, 0.9), transforms={'move': ('translate', array([42,  4]))}, corners=exc('(transformed(`self.topleft), transformed(`self.botright))'), topright=exc('topright(`self.corners)'), id='n_487341', botleft=exc('botleft(`self.corners)'), px_botright=P(558.0, 574.0), px_topleft=P(100, 516), children = [
-        Node("path", id='n_487340', skip_points=True, children = [
+        Node("path", skip_points=True, id='n_487340', children = [
           Node("line", start=exc('`self.parent.parent.topleft'), end=exc('`self.parent.parent.topright'), id='n_487336'),
           Node("line", start=exc('`self.parent.parent.topright'), end=exc('`self.parent.parent.botright'), id='n_487337'),
           Node("line", start=exc('`self.parent.parent.botright'), end=exc('`self.parent.parent.botleft'), id='n_487338'),
           Node("line", start=exc('`self.parent.parent.botleft'), end=exc('`self.parent.parent.topleft'), id='n_487339')])]),
       Node("text", transforms={'tcenter': ('translate', array([ 18. ,  -8.5]))}, id='title8', value=u'Document saving and loading', font_size=28.341957434572787, p_botleft=P(61.0, 100.0)),
-      Node("text", font_size=16.599999999999998, id='n_57762', value=u'(These steps can be skipped until later.)', p_botleft=P(118.0, 145.0)),
+      Node("text", id='n_57762', value=u'(These steps can be skipped until later.)', font_size=16.599999999999998, p_botleft=P(118.0, 145.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_57764', value=u'A "Save" and "Load" button will let us easily', p_botleft=P(30.0, 197.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_57766', value='continue in case this program needs to restart.', p_botleft=P(29.0, 240.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_57770', value=u"Press 't' and type in '!doc.save()'. Press enter.", p_botleft=P(28.0, 283.0)),
@@ -62,7 +62,7 @@ root = Node("group", id='root', children = [
       Node("text", transforms={'distribute': ('translate', array([  0., -24.]))}, id='n_62837', value=u'program, re-open it and run doc.load() in console.', p_botleft=P(28.0, 522.0)),
       Node("text", transforms={'move': ('translate', array([92,  4]))}, id='n_484554', value=u'Exec:', p_botleft=P(67.0, 559.0)),
       Node("group", fill_color=(1, 1, 1), transforms={'move': ('translate', array([92,  4]))}, corners=exc('(transformed(`self.topleft), transformed(`self.botright))'), topright=exc('topright(`self.corners)'), id='n_484744', botleft=exc('botleft(`self.corners)'), px_botright=P(445.0, 568.0), px_topleft=P(163.0, 522.0), children = [
-        Node("path", id='n_484743', skip_points=True, children = [
+        Node("path", skip_points=True, id='n_484743', children = [
           Node("line", start=exc('`self.parent.parent.topleft'), end=exc('`self.parent.parent.topright'), id='n_484739'),
           Node("line", start=exc('`self.parent.parent.topright'), end=exc('`self.parent.parent.botright'), id='n_484740'),
           Node("line", start=exc('`self.parent.parent.botright'), end=exc('`self.parent.parent.botleft'), id='n_484741'),
@@ -74,18 +74,18 @@ root = Node("group", id='root', children = [
       Node("text", transforms={'tcenter': ('translate', array([ 140. ,   -5.5]))}, id='title8_copy0', value=u'Moving buttons', font_size=34.01034892148734, p_botleft=P(61.0, 100.0)),
       Node("text", transforms={'move': ('translate', array([231,  60]))}, id='n_58447_copy0', value=u'e', font_size=11.435739999999997, p_botleft=P(158.0, 337.0)),
       Node("group", transforms={'move': ('translate', array([-10,  72]))}, id='n_448972', children = [
-        Node("text", font_size=11.435739999999997, id='n_59413', value=u'the button is now here', p_botleft=P(548.0, 284.0)),
+        Node("text", id='n_59413', value=u'the button is now here', font_size=11.435739999999997, p_botleft=P(548.0, 284.0)),
         Node("group", topright=exc('topright(`self.corners)'), corners=exc('(transformed(`self.topleft), transformed(`self.botright))'), transforms={'move': ('translate', array([2, 2]))}, id='n_59033', botleft=exc('botleft(`self.corners)'), px_botright=P(526.0, 300.0), px_topleft=P(397, 263), children = [
-          Node("path", dash=([3, 3], 0), skip_points=True, id='n_59032', children = [
+          Node("path", dash=([3, 3], 0), id='n_59032', skip_points=True, children = [
             Node("line", start=exc('`self.parent.parent.topleft'), end=exc('`self.parent.parent.topright'), id='n_59028'),
             Node("line", start=exc('`self.parent.parent.topright'), end=exc('`self.parent.parent.botright'), id='n_59029'),
             Node("line", start=exc('`self.parent.parent.botright'), end=exc('`self.parent.parent.botleft'), id='n_59030'),
             Node("line", start=exc('`self.parent.parent.botleft'), end=exc('`self.parent.parent.topleft'), id='n_59031')])]),
         Node("path", fill_color=None, id='n_58653', children = [
           Node("line", id='n_58650', p_start=P(178.0, 266.0), p_end=P(400.0, 301.0))]),
-        Node("text", font_size=11.435739999999997, id='n_58654', value=u'move mouse', p_botleft=P(191.0, 301.0)),
-        Node("text", skip_points=False, id='n_58445', value=u'!doc.save()', on_click=u'doc.save()', p_botleft=P(177.0, 264.0)),
-        Node("text", font_size=11.435739999999997, id='n_58447', value=u'e', p_botleft=P(153.0, 273.0))]),
+        Node("text", id='n_58654', value=u'move mouse', font_size=11.435739999999997, p_botleft=P(191.0, 301.0)),
+        Node("text", value=u'!doc.save()', id='n_58445', on_click=u'doc.save()', skip_points=False, p_botleft=P(177.0, 264.0)),
+        Node("text", id='n_58447', value=u'e', font_size=11.435739999999997, p_botleft=P(153.0, 273.0))]),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_450086', value=u'To move buttons around:', p_botleft=P(31.0, 168.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide22', children = [
       Node("text", transforms={'tcenter': ('translate', array([ 119. ,    8.5]))}, id='title20', value=u'Default keys', font_size=34.559999999999995, p_botleft=P(116.0, 86.0)),
@@ -94,51 +94,51 @@ root = Node("group", id='root', children = [
       Node("text", font_size=16.599999999999998, value=u'!print(input_callbacks)', stroke_color=(0, 0, 1), on_click=u'print(input_callbacks)', id='n_64530', transforms={'move': ('translate', array([ 15, 400]))}, p_botleft=P(246.0, 184.0)),
       Node("text", transforms={'move': ('translate', array([ 15, 400]))}, id='n_64382', value=u'Click this button:', font_size=16.467465599999993, p_botleft=P(21.0, 185.0)),
       Node("group", topright=exc('topright(`self.corners)'), corners=exc('(transformed(`self.topleft), transformed(`self.botright))'), transforms={'move': ('translate', array([ 1, 45]))}, id='n_257550', botleft=exc('botleft(`self.corners)'), px_botright=P(721.0, 476.0), px_topleft=P(40.0, 139.0), children = [
-        Node("path", id='n_257549', skip_points=True, children = [
+        Node("path", skip_points=True, id='n_257549', children = [
           Node("line", start=exc('`self.parent.parent.topleft'), end=exc('`self.parent.parent.topright'), id='n_257545'),
           Node("line", start=exc('`self.parent.parent.topright'), end=exc('`self.parent.parent.botright'), id='n_257546'),
           Node("line", start=exc('`self.parent.parent.botright'), end=exc('`self.parent.parent.botleft'), id='n_257547'),
           Node("line", start=exc('`self.parent.parent.botleft'), end=exc('`self.parent.parent.topleft'), id='n_257548')])]),
       Node("group", transforms={'move': ('translate', array([31, 46]))}, id='n_425707', children = [
         Node("group", transforms={'align': ('translate', array([-5.,  0.])), 'distribute': ('translate', array([  0., -56.]))}, id='n_282710', children = [
-          Node("text", font_size=13.777999999999997, id='n_258730', value=u'reload', p_botleft=P(134.0, 523.0)),
-          Node("text", font_size=16.599999999999998, id='n_258706', value=u'ctrl-r', p_botleft=P(39.0, 523.0))]),
+          Node("text", id='n_258730', value=u'reload', font_size=13.777999999999997, p_botleft=P(134.0, 523.0)),
+          Node("text", id='n_258706', value=u'ctrl-r', font_size=16.599999999999998, p_botleft=P(39.0, 523.0))]),
         Node("group", transforms={'align': ('translate', array([-5.,  0.])), 'distribute': ('translate', array([  0., -50.]))}, id='n_282082', children = [
-          Node("text", font_size=13.777999999999997, id='n_258549', value=u'redo', p_botleft=P(134.0, 488.0)),
-          Node("text", font_size=16.599999999999998, id='n_258501', value=u'shift-z', p_botleft=P(39.0, 488.0))]),
+          Node("text", id='n_258549', value=u'redo', font_size=13.777999999999997, p_botleft=P(134.0, 488.0)),
+          Node("text", id='n_258501', value=u'shift-z', font_size=16.599999999999998, p_botleft=P(39.0, 488.0))]),
         Node("group", transforms={'align': ('translate', array([-5.,  0.])), 'distribute': ('translate', array([  0., -44.]))}, id='n_280094', children = [
-          Node("text", font_size=13.777999999999997, id='n_258392', value=u'undo', p_botleft=P(133.0, 453.0)),
-          Node("text", font_size=16.599999999999998, id='n_258390', value=u'z', p_botleft=P(39.0, 453.0))]),
+          Node("text", id='n_258392', value=u'undo', font_size=13.777999999999997, p_botleft=P(133.0, 453.0)),
+          Node("text", id='n_258390', value=u'z', font_size=16.599999999999998, p_botleft=P(39.0, 453.0))]),
         Node("group", transforms={'align': ('translate', array([-5.,  0.])), 'distribute': ('translate', array([  0., -39.]))}, id='n_279501', children = [
-          Node("text", font_size=16.599999999999998, id='n_258045', value=u'click', p_botleft=P(39.0, 422.0)),
-          Node("text", font_size=13.777999999999997, id='n_258047', value=u'activate button', p_botleft=P(133.0, 422.0))]),
+          Node("text", id='n_258045', value=u'click', font_size=16.599999999999998, p_botleft=P(39.0, 422.0)),
+          Node("text", id='n_258047', value=u'activate button', font_size=13.777999999999997, p_botleft=P(133.0, 422.0))]),
         Node("group", transforms={'align': ('translate', array([-5.,  0.])), 'distribute': ('translate', array([  0., -33.]))}, id='n_272065', children = [
-          Node("text", font_size=13.777999999999997, id='n_257859', value=u'grab point, drop point', p_botleft=P(132.0, 387.0)),
-          Node("text", font_size=16.599999999999998, id='n_257857', value=u'e', p_botleft=P(39.0, 387.0))]),
+          Node("text", id='n_257859', value=u'grab point, drop point', font_size=13.777999999999997, p_botleft=P(132.0, 387.0)),
+          Node("text", id='n_257857', value=u'e', font_size=16.599999999999998, p_botleft=P(39.0, 387.0))]),
         Node("group", transforms={'align': ('translate', array([-1.,  0.])), 'distribute': ('translate', array([  0., -38.]))}, id='n_357228', children = [
-          Node("text", font_size=16.599999999999998, id='n_357061', value=u'x', p_botleft=P(36.0, 366.0)),
-          Node("text", font_size=13.777999999999997, id='n_357063', value=u'delete selection', p_botleft=P(127.0, 366.0))]),
+          Node("text", id='n_357061', value=u'x', font_size=16.599999999999998, p_botleft=P(36.0, 366.0)),
+          Node("text", id='n_357063', value=u'delete selection', font_size=13.777999999999997, p_botleft=P(127.0, 366.0))]),
         Node("group", transforms={'align': ('translate', array([-2.,  0.])), 'distribute': ('translate', array([  0., -34.]))}, id='n_385490', children = [
-          Node("text", font_size=13.777999999999997, id='n_385299', value=u'ungroup selection', p_botleft=P(128.0, 336.0)),
-          Node("text", font_size=16.599999999999998, id='n_385297', value=u'u', p_botleft=P(35.0, 336.0))]),
+          Node("text", id='n_385299', value=u'ungroup selection', font_size=13.777999999999997, p_botleft=P(128.0, 336.0)),
+          Node("text", id='n_385297', value=u'u', font_size=16.599999999999998, p_botleft=P(35.0, 336.0))]),
         Node("group", transforms={'align': ('translate', array([-3.,  0.])), 'distribute': ('translate', array([  0., -25.]))}, id='n_356260', children = [
-          Node("text", font_size=13.777999999999997, id='n_356077', value=u'group selection', p_botleft=P(131.0, 301.0)),
-          Node("text", font_size=16.599999999999998, id='n_356075', value=u'g', p_botleft=P(37.0, 300.0))]),
+          Node("text", id='n_356077', value=u'group selection', font_size=13.777999999999997, p_botleft=P(131.0, 301.0)),
+          Node("text", id='n_356075', value=u'g', font_size=16.599999999999998, p_botleft=P(37.0, 300.0))]),
         Node("group", transforms={'distribute': ('translate', array([  0., -17.]))}, id='n_318883', children = [
-          Node("text", font_size=13.777999999999997, id='n_317466', value=u'select/deselect', p_botleft=P(128.0, 267.0)),
-          Node("text", font_size=16.599999999999998, id='n_317084', value=u's', p_botleft=P(34.0, 267.0))]),
+          Node("text", id='n_317466', value=u'select/deselect', font_size=13.777999999999997, p_botleft=P(128.0, 267.0)),
+          Node("text", id='n_317084', value=u's', font_size=16.599999999999998, p_botleft=P(34.0, 267.0))]),
         Node("group", transforms={'distribute': ('translate', array([  0., -12.]))}, id='n_271661', children = [
-          Node("text", font_size=16.599999999999998, id='n_257920', value=u'enter', p_botleft=P(34.0, 236.0)),
-          Node("text", font_size=13.777999999999997, id='n_257930', value=u'finish entering text', p_botleft=P(128.0, 236.0))]),
+          Node("text", id='n_257920', value=u'enter', font_size=16.599999999999998, p_botleft=P(34.0, 236.0)),
+          Node("text", id='n_257930', value=u'finish entering text', font_size=13.777999999999997, p_botleft=P(128.0, 236.0))]),
         Node("group", transforms={'distribute': ('translate', array([ 0., -6.]))}, id='n_271233', children = [
-          Node("text", font_size=13.777999999999997, id='n_258169', value=u'(pressed over text) edit text, button or status bar', p_botleft=P(126.0, 202.0)),
-          Node("text", font_size=16.599999999999998, id='n_258167', value=u't', p_botleft=P(35.0, 202.0))]),
+          Node("text", id='n_258169', value=u'(pressed over text) edit text, button or status bar', font_size=13.777999999999997, p_botleft=P(126.0, 202.0)),
+          Node("text", id='n_258167', value=u't', font_size=16.599999999999998, p_botleft=P(35.0, 202.0))]),
         Node("group", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_270671', children = [
-          Node("text", font_size=13.777999999999997, id='n_257522', value=u'create text, button (! prefix) or status bar (= prefix)', p_botleft=P(127.0, 168.0)),
-          Node("text", font_size=16.599999999999998, id='n_257520', value=u't', p_botleft=P(35.0, 168.0))])]),
+          Node("text", id='n_257522', value=u'create text, button (! prefix) or status bar (= prefix)', font_size=13.777999999999997, p_botleft=P(127.0, 168.0)),
+          Node("text", id='n_257520', value=u't', font_size=16.599999999999998, p_botleft=P(35.0, 168.0))])]),
       Node("text", transforms={'align': ('translate', array([ 1.,  0.])), 'distribute': ('translate', array([ 0.,  0.]))}, id='n_430269', value=u"From here on, we'll assume knowledge of default keys", font_size=16.599999999999998, p_botleft=P(29.0, 132.0)),
       Node("text", transforms={'align': ('translate', array([-1.,  0.])), 'distribute': ('translate', array([ 0.,  3.]))}, id='n_430292', value=u'or at least some way to perform these actions.', font_size=16.599999999999998, p_botleft=P(31.0, 161.0)),
-      Node("text", font_size=11.435739999999997, id='n_498715', value=u'non-exhaustive table of default keys (other keys: r, l, m, f)', p_botleft=P(130.0, 547.0))]),
+      Node("text", id='n_498715', value=u'non-exhaustive table of default keys (other keys: r, l, m, f)', font_size=11.435739999999997, p_botleft=P(130.0, 547.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide2', children = [
       Node("text", transforms={'tcenter': ('translate', array([-51.5,  -5. ]))}, id='title2', value=u'Warm up: Font size changes', font_size=34.42175999999999, p_botleft=P(80.0, 100.0)),
       Node("text", transforms={'align': ('translate', array([-25.,   0.]))}, id='n_3907', value=u"We'll try to make the title slide first.", p_botleft=P(54.0, 165.0)),
@@ -149,33 +149,33 @@ root = Node("group", id='root', children = [
           Node("text", transforms={'distribute': ('translate', array([  0., -10.]))}, id='n_1690_copy1', value=u'slides', font_size=28.115675246415154, p_botleft=P(206.0, 292.0))]),
         Node("text", transforms={'move': ('translate', array([ 62, -66]))}, id='n_3514_copy0', value=u'Press Page Down now to go to the next slide', font_size=9.491664199999997, p_botleft=P(142.0, 463.0)),
         Node("group", topright=exc('topright(`self.corners)'), corners=exc('(transformed(`self.topleft), transformed(`self.botright))'), id='n_7947', botleft=exc('botleft(`self.corners)'), px_botright=P(552.0, 418.0), px_topleft=P(184, 193), children = [
-          Node("path", id='n_7946', skip_points=True, children = [
+          Node("path", skip_points=True, id='n_7946', children = [
             Node("line", start=exc('`self.parent.parent.topleft'), end=exc('`self.parent.parent.topright'), id='n_7942'),
             Node("line", start=exc('`self.parent.parent.topright'), end=exc('`self.parent.parent.botright'), id='n_7943'),
             Node("line", start=exc('`self.parent.parent.botright'), end=exc('`self.parent.parent.botleft'), id='n_7944'),
             Node("line", start=exc('`self.parent.parent.botleft'), end=exc('`self.parent.parent.topleft'), id='n_7945')])])]),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.])), 'align': ('translate', array([-4.,  0.])), 'move': ('translate', array([  2, -14]))}, id='n_103763', value=u'Creating the text is easy: press t, type, press enter, repeat.', font_size=16.599999999999998, p_botleft=P(29.0, 482.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -2.])), 'align': ('translate', array([-4.,  0.])), 'move': ('translate', array([  2, -14]))}, id='n_103820', value=u'But now we have to change the font size.', p_botleft=P(28.0, 527.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=3, t=0, id='slide5', children = [
+    Node("group", t=0, id='slide5', max_t=3, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 17. , -12.5]))}, id='title3', value=u'Font size change', font_size=34.28407295999999, p_botleft=P(166.0, 107.0)),
       Node("text", id='n_11876', transforms={'distribute': ('translate', array([ 0.,  0.]))}, value=u'By default all text are in 20 pt', p_botleft=P(27.0, 157.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -4.]))}, id='n_11878', value=u'We want to make the title text bigger', visible=exr('`slide5.t >= 1'), p_botleft=P(28.0, 204.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -7.]))}, id='n_11880', value=u'and the instructions at the bottom smaller.', visible=exr('`slide5.t >= 1'), p_botleft=P(28.0, 250.0)),
-      Node("text", font_size=16.533599999999996, id='n_43872', value=u'Press right arrow to reveal bullet points.', p_botleft=P(137.0, 562.0)),
-      Node("text", transforms={'move': ('translate', array([ 11, 131]))}, value=u"!doc['slide5.t'] = 0", id='n_51685', on_click=u"doc['slide5.t'] = 0", font_size=11.435739999999997, p_botleft=P(55.0, 459.0)),
-      Node("text", transforms={'move': ('translate', array([ 11, 131]))}, value=u"!doc['slide5.t'] = 1", id='n_51685_copy1', on_click=u"doc['slide5.t'] = 1", font_size=11.435739999999997, p_botleft=P(248.0, 460.0)),
-      Node("text", transforms={'move': ('translate', array([ 11, 131]))}, value=u"!doc['slide5.t'] = 2", id='n_51685_copy1_copy0', on_click=u"doc['slide5.t'] = 2", font_size=11.435739999999997, p_botleft=P(434.0, 460.0)),
+      Node("text", id='n_43872', value=u'Press right arrow to reveal bullet points.', font_size=16.533599999999996, p_botleft=P(137.0, 562.0)),
+      Node("text", transforms={'move': ('translate', array([ 10, 149]))}, value=u"!doc['slide5.t'] = 0", id='n_51685', on_click=u"doc['slide5.t'] = 0", font_size=11.435739999999997, p_botleft=P(55.0, 459.0)),
+      Node("text", transforms={'move': ('translate', array([ 10, 149]))}, value=u"!doc['slide5.t'] = 1", id='n_51685_copy1', on_click=u"doc['slide5.t'] = 1", font_size=11.435739999999997, p_botleft=P(248.0, 460.0)),
+      Node("text", transforms={'move': ('translate', array([ 10, 149]))}, value=u"!doc['slide5.t'] = 2", id='n_51685_copy1_copy0', on_click=u"doc['slide5.t'] = 2", font_size=11.435739999999997, p_botleft=P(434.0, 460.0)),
       Node("group", stroke_color=(0, 0, 1), visible=exr('`self.parent.t >= 3'), transforms={'move': ('translate', array([18, 30]))}, id='n_79619', children = [
-        Node("text", id='n_79287', value='        node[\'font_size\'] = default_get(node, "font_size") * factor', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 410.0)),
-        Node("text", id='n_79285', value='      if node.name == "text":', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 386.0)),
-        Node("text", id='n_79283', value="    for node, transform in ref['ref'].dfs():", font_size=11.5, font_face='monospace', p_botleft=P(50.0, 362.0)),
-        Node("text", id='n_79281', value="  for ref in doc['selection']:", font_size=11.5, font_face='monospace', p_botleft=P(50.0, 338.0)),
-        Node("text", id='n_79279', value='  factor = float(factor)', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 314.0)),
-        Node("text", id='n_79277', value='def font_change(factor=1.2):', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 290.0))]),
+        Node("text", value='        node[\'font_size\'] = default_get(node, "font_size") * factor', id='n_79287', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 410.0)),
+        Node("text", value='      if node.name == "text":', id='n_79285', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 386.0)),
+        Node("text", value="    for node, transform in ref['ref'].dfs():", id='n_79283', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 362.0)),
+        Node("text", value="  for ref in doc['selection']:", id='n_79281', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 338.0)),
+        Node("text", value='  factor = float(factor)', id='n_79279', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 314.0)),
+        Node("text", value='def font_change(factor=1.2):', id='n_79277', font_size=11.5, font_face='monospace', p_botleft=P(50.0, 290.0))]),
       Node("text", visible=exr('`self.parent.t >= 2'), transforms={'distribute': ('translate', array([ 0., -9.]))}, value=u'Add this function to change the font in the selection', id='n_83260', font_size=16.599999999999998, p_botleft=P(30.0, 291.0)),
       Node("text", visible=exr('`self.parent.t >= 3'), transforms={'distribute': ('translate', array([ 0.,  0.]))}, value=u"'font_size' isn't a style and so has to be set on individual", id='n_239916', font_size=16.599999999999998, p_botleft=P(28.0, 481.0)),
       Node("text", visible=exr('`self.parent.t >= 3'), transforms={'distribute': ('translate', array([ 0., -3.]))}, value=u'text elements', id='n_240258', font_size=16.599999999999998, p_botleft=P(30.0, 523.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=3, t=0, id='slide11', children = [
+    Node("group", t=0, id='slide11', max_t=3, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-72. ,  -0.5]))}, id='title9', value=u'Applying font changes', font_size=34.559999999999995, p_botleft=P(182.0, 95.0)),
       Node("text", transforms={'align': ('translate', array([ 1.,  0.])), 'distribute': ('translate', array([ 0.,  8.]))}, id='n_104092', value=u'It acts on selected elements', p_botleft=P(29.0, 196.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  8.]))}, id='n_104094', value=u"Select all the text ('s') and make them bigger", visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 239.0)),
@@ -190,7 +190,7 @@ root = Node("group", id='root', children = [
         Node("text", transforms={'align': ('translate', array([  0.,  31.])), 'move': ('translate', array([  4, -32]))}, id='n_104100', value=u'How to', font_size=24.0, p_botleft=P(187.0, 327.0)),
         Node("text", transforms={'align': ('translate', array([  0.,  33.])), 'move': ('translate', array([  4, -32]))}, id='n_104098', value=u'How to', p_botleft=P(53.0, 322.0))]),
       Node("text", transforms={'align': ('translate', array([-3.,  0.])), 'distribute': ('translate', array([ 0.,  0.]))}, id='n_241646', value=u"Add a '!font_change()' button", p_botleft=P(33.0, 161.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=2, t=0, id='slide25', children = [
+    Node("group", t=0, id='slide25', max_t=2, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-9.5,  3.5]))}, id='title23', value=u'Keyboard shortcuts', font_size=34.559999999999995, p_botleft=P(154.0, 91.0)),
       Node("text", visible=exr('`self.parent.t >= 2'), transforms={'distribute': ('translate', array([ 0., -8.])), 'move': ('translate', array([ -2, -16]))}, value=u'Much more complex interaction combining keyboard and mouse', id='n_499199', font_size=13.777999999999997, p_botleft=P(28.0, 526.0)),
       Node("text", visible=exr('`self.parent.t >= 2'), transforms={'distribute': ('translate', array([  0., -11.])), 'move': ('translate', array([ -2, -16]))}, value=u"is possible by editing input_callbacks, but that's not covered here.", id='n_499201', font_size=13.777999999999997, p_botleft=P(29.0, 565.0)),
@@ -200,39 +200,39 @@ root = Node("group", id='root', children = [
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([  0., -10.])), 'move': ('translate', array([ -2, -16]))}, value=u'- Add 2 lines to the input_callbacks string (in myslides.py)', id='n_499564', font_size=16.599999999999998, p_botleft=P(29.0, 248.0)),
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([ 0., -5.])), 'move': ('translate', array([ -2, -16]))}, value=u"- Edit the 'command = ...' line by adding", id='n_500055', font_size=16.599999999999998, p_botleft=P(29.0, 338.0)),
       Node("group", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([ 0., -9.])), 'move': ('translate', array([ -2, -16]))}, id='n_500213', children = [
-        Node("text", value='font_decrease = key_press(minus) !font_change(0.83)', stroke_color=(0, 0, 1), id='n_500176', font_size=10, font_face='monospace', p_botleft=P(123.0, 303.0)),
-        Node("text", value='font_increase = shift_key_press(equal) !font_change', stroke_color=(0, 0, 1), id='n_500167', font_size=10, font_face='monospace', p_botleft=P(123.0, 279.0))]),
+        Node("text", font_size=10, value='font_decrease = key_press(minus) !font_change(0.83)', stroke_color=(0, 0, 1), font_face='monospace', id='n_500176', p_botleft=P(123.0, 303.0)),
+        Node("text", font_size=10, value='font_increase = shift_key_press(equal) !font_change', stroke_color=(0, 0, 1), font_face='monospace', id='n_500167', p_botleft=P(123.0, 279.0))]),
       Node("text", visible=exr('`self.parent.t >= 1'), font_size=10, transforms={'distribute': ('translate', array([ 0., -7.])), 'move': ('translate', array([101, -16]))}, stroke_color=(0, 0, 1), font_face='monospace', id='n_501263', value='| @font_increase | @font_decrease', p_botleft=P(131.0, 372.0)),
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([  0., -17.])), 'move': ('translate', array([ -2, -16]))}, value=u'Reload (ctrl-r), select some text and press + or -.', id='n_502389', font_size=16.599999999999998, p_botleft=P(28.0, 421.0)),
-      Node("text", visible=exr('`self.parent.t >= 2'), transforms={'distribute': ('translate', array([  0., -18.])), 'move': ('translate', array([ -2, -16]))}, value=u'In future slides, bind new functions to either button to key', id='n_503189', font_size=16.599999999999998, p_botleft=P(28.0, 461.0)),
+      Node("text", visible=exr('`self.parent.t >= 2'), transforms={'distribute': ('translate', array([  0., -18.])), 'move': ('translate', array([ -2, -16]))}, value=u'In future slides, bind new functions to either a button or key', id='n_503189', font_size=16.599999999999998, p_botleft=P(28.0, 461.0)),
       Node("text", visible=exr('`self.parent.t >= 2'), transforms={'distribute': ('translate', array([ 0.,  0.])), 'move': ('translate', array([ -2, -16]))}, value=u'as you see fit.', id='n_503989', font_size=16.599999999999998, p_botleft=P(29.0, 482.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=3, t=0, id='slide16', children = [
+    Node("group", t=2, id='slide16', max_t=3, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-9. , -8.5]))}, id='title14', value=u'Optional: grouping and alignment', font_size=28.799999999999997, p_botleft=P(45.0, 100.0)),
       Node("text", transforms={'align': ('translate', array([-27.,   0.]))}, id='n_162935', value=u'To align the three separate lines in the title', p_botleft=P(58.0, 166.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_207493', value=u"- Select text one by one ('s')", p_botleft=P(29.0, 213.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -1.]))}, id='n_207495', value=u"- Group them ('g')", p_botleft=P(29.0, 257.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -13.]))}, id='n_207497', value=u'- Modify set_auto_layout to align vertically', visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 312.0)),
       Node("group", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([  0., -16.]))}, id='n_212397', children = [
-        Node("text", value=u'Change', id='n_207766', p_botleft=P(29.0, 358.0)),
-        Node("text", value=u'node.L["axis"] = 0', stroke_color=(0, 0, 1), id='n_207499', font_size=12.0, font_face='monospace', p_botleft=P(161.0, 358.0)),
-        Node("text", value=u'to', id='n_208151', p_botleft=P(390.0, 358.0)),
-        Node("text", value='node.L["axis"] = 1', stroke_color=(0, 0, 1), id='n_207499_copy0', font_size=12.0, font_face='monospace', p_botleft=P(449.0, 357.0))]),
+        Node("text", id='n_207766', value=u'Change', p_botleft=P(29.0, 358.0)),
+        Node("text", font_size=12.0, value=u'node.L["axis"] = 0', stroke_color=(0, 0, 1), font_face='monospace', id='n_207499', p_botleft=P(161.0, 358.0)),
+        Node("text", id='n_208151', value=u'to', p_botleft=P(390.0, 358.0)),
+        Node("text", font_size=12.0, value='node.L["axis"] = 1', stroke_color=(0, 0, 1), font_face='monospace', id='n_207499_copy0', p_botleft=P(449.0, 357.0))]),
       Node("text", transforms={'distribute': ('translate', array([  0., -22.]))}, id='n_212621', value=u'- Save and reload (ctrl-r)', visible=exr('`self.parent.t >= 2'), p_botleft=P(29.0, 407.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -29.]))}, id='n_212623', value=u'- Call set_auto_layout', visible=exr('`self.parent.t >= 2'), p_botleft=P(29.0, 457.0)),
-      Node("text", visible=exr('`self.parent.t >= 3'), id='n_216390', value=u'Alternatively, manually call align and distribute', p_botleft=P(29.0, 474.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=2, t=0, id='slide3', children = [
+      Node("text", id='n_216390', value=u'Alternatively, manually call align and distribute', visible=exr('`self.parent.t >= 3'), p_botleft=P(29.0, 474.0))]),
+    Node("group", t=0, id='slide3', max_t=2, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 28.5,  -9. ]))}, value=u'Having multiple slides', id='title4', font_size=34.559999999999995, font_face=None, p_botleft=P(82.0, 104.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_130973', value=u"Now that we have one slide, let's make more.", p_botleft=P(28.0, 155.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -13.]))}, id='n_131457', value=u'One way to have multiple slide is with many', visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 211.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -13.]))}, id='n_131459', value=u"groups under 'drawing' and one visible group", visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 254.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -19.]))}, id='n_131461', value=u'(the current slide) at a time.', visible=exr('`self.parent.t >= 1'), p_botleft=P(28.0, 303.0)),
       Node("group", visible=exr('`self.parent.t >= 2'), transforms={'move': ('translate', array([ 1, 27]))}, id='n_138245', children = [
-        Node("text", value='  group: id="slide3" visible=False', stroke_color=(0, 0, 1), id='n_137682', font_size=14, font_face='monospace', p_botleft=P(145.0, 427.0)),
-        Node("text", value='  group: id="slide2" visible=False', stroke_color=(0, 0, 1), id='n_137673', font_size=14, font_face='monospace', p_botleft=P(145.0, 400.0)),
-        Node("text", value='  group: id="slide1" visible=True', stroke_color=(0, 0, 1), id='n_137664', font_size=14, font_face='monospace', p_botleft=P(145.0, 373.0)),
-        Node("text", value=u'group: id="drawing"', stroke_color=(0, 0, 1), id='n_137655', font_size=14, font_face='monospace', p_botleft=P(145.0, 346.0))]),
+        Node("text", font_size=14, value='  group: id="slide3" visible=False', stroke_color=(0, 0, 1), font_face='monospace', id='n_137682', p_botleft=P(145.0, 427.0)),
+        Node("text", font_size=14, value='  group: id="slide2" visible=False', stroke_color=(0, 0, 1), font_face='monospace', id='n_137673', p_botleft=P(145.0, 400.0)),
+        Node("text", font_size=14, value='  group: id="slide1" visible=True', stroke_color=(0, 0, 1), font_face='monospace', id='n_137664', p_botleft=P(145.0, 373.0)),
+        Node("text", font_size=14, value=u'group: id="drawing"', stroke_color=(0, 0, 1), font_face='monospace', id='n_137655', p_botleft=P(145.0, 346.0))]),
       Node("text", transforms={'distribute': ('translate', array([  0., -31.]))}, id='n_140607', value=u'Something like this:', visible=exr('`self.parent.t >= 2'), p_botleft=P(29.0, 358.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=1, t=0, id='slide12', children = [
+    Node("group", t=0, id='slide12', max_t=1, visible=exr('`editor.slide == `self.id'), children = [
       Node("group", id='n_3224', auto_layout=True, transforms={'move': ('translate', array([ 3, 36]))}, side=0, axis=1, children = [
         Node("text", transforms={'align': ('translate', array([-2.,  0.])), 'distribute': ('translate', array([ 0.,  0.]))}, id='n_2884', value=u'- Group all elements. They will make up one slide.', font_face=None, p_botleft=P(25.0, 181.0)),
         Node("text", transforms={'align': ('translate', array([-3.,  0.])), 'distribute': ('translate', array([  0., -14.]))}, id='n_2886', value=u"- Rename the new group's id to 'slide1'.", font_face=None, p_botleft=P(26.0, 228.0)),
@@ -241,7 +241,7 @@ root = Node("group", id='root', children = [
       Node("text", transforms={'tcenter': ('translate', array([ 30. ,   3.5]))}, id='title10', value=u'Multiple slides', font_size=41.471999999999994, p_botleft=P(147.0, 95.0)),
       Node("text", transforms={'move': ('translate', array([ 2, 26]))}, id='n_149953', value=u'Now we need a function to change slides', visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 345.0)),
       Node("text", id='n_150684', transforms={'move': ('translate', array([ 0, 11]))}, value=u'To get the document to that state:', p_botleft=P(28.0, 145.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=1, t=0, id='slide13', children = [
+    Node("group", t=0, id='slide13', max_t=1, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-34.5,  14.5]))}, id='title11', value=u'Changing slides', font_size=41.471999999999994, p_botleft=P(189.0, 84.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -2.]))}, id='n_150688', value=u'a better way to handle the active (visible) slide', visible=exr('`self.parent.t >= 1'), p_botleft=P(31.0, 526.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -3.]))}, id='n_150694', value=u'Create a slide changing function.', visible=exr('`self.parent.t >= 1'), p_botleft=P(33.0, 246.0)),
@@ -249,14 +249,14 @@ root = Node("group", id='root', children = [
       Node("text", id='n_150690', transforms={'distribute': ('translate', array([ 0.,  0.]))}, value=u"From the console set doc['editor.slide'] = 'slide1'", p_botleft=P(32.0, 157.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_150686', value=u"Before implementing this function, let's think of", visible=exr('`self.parent.t >= 1'), p_botleft=P(30.0, 481.0)),
       Node("group", visible=exr('`self.parent.t >= 1'), id='n_158503', children = [
-        Node("text", value="    doc[doc['editor.slide']]['visible'] = True", stroke_color=(0, 0, 1), id='n_157726', font_size=10, font_face='monospace', p_botleft=P(80.0, 428.0)),
-        Node("text", value="    doc['selection.root'] = doc['editor.slide'] = slides[index % len(slides)]", stroke_color=(0, 0, 1), id='n_157717', font_size=10, font_face='monospace', p_botleft=P(80.0, 404.0)),
-        Node("text", value="    doc[doc['editor.slide']]['visible'] = False", stroke_color=(0, 0, 1), id='n_157708', font_size=10, font_face='monospace', p_botleft=P(80.0, 380.0)),
-        Node("text", value="    slides = doc['editor.slides']", stroke_color=(0, 0, 1), id='n_157699', font_size=10, font_face='monospace', p_botleft=P(80.0, 356.0)),
-        Node("text", value='    index = slide_index() + diff', stroke_color=(0, 0, 1), id='n_157690', font_size=10, font_face='monospace', p_botleft=P(80.0, 332.0)),
-        Node("text", value='    diff = int(diff)', stroke_color=(0, 0, 1), id='n_157681', font_size=10, font_face='monospace', p_botleft=P(80.0, 308.0)),
-        Node("text", value='def change_slide(diff=1):', stroke_color=(0, 0, 1), id='n_157672', font_size=10, font_face='monospace', p_botleft=P(80.0, 284.0))])]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=2, t=0, id='slide14', children = [
+        Node("text", font_size=10, value="    doc[doc['editor.slide']]['visible'] = True", stroke_color=(0, 0, 1), font_face='monospace', id='n_157726', p_botleft=P(80.0, 428.0)),
+        Node("text", font_size=10, value="    doc['selection.root'] = doc['editor.slide'] = slides[index % len(slides)]", stroke_color=(0, 0, 1), font_face='monospace', id='n_157717', p_botleft=P(80.0, 404.0)),
+        Node("text", font_size=10, value="    doc[doc['editor.slide']]['visible'] = False", stroke_color=(0, 0, 1), font_face='monospace', id='n_157708', p_botleft=P(80.0, 380.0)),
+        Node("text", font_size=10, value="    slides = doc['editor.slides']", stroke_color=(0, 0, 1), font_face='monospace', id='n_157699', p_botleft=P(80.0, 356.0)),
+        Node("text", font_size=10, value='    index = slide_index() + diff', stroke_color=(0, 0, 1), font_face='monospace', id='n_157690', p_botleft=P(80.0, 332.0)),
+        Node("text", font_size=10, value='    diff = int(diff)', stroke_color=(0, 0, 1), font_face='monospace', id='n_157681', p_botleft=P(80.0, 308.0)),
+        Node("text", font_size=10, value='def change_slide(diff=1):', stroke_color=(0, 0, 1), font_face='monospace', id='n_157672', p_botleft=P(80.0, 284.0))])]),
+    Node("group", t=0, id='slide14', max_t=2, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 28. ,   6.5]))}, id='title12', value=u'Visible slide', font_size=41.471999999999994, p_botleft=P(189.0, 92.0)),
       Node("text", transforms={'align': ('translate', array([-12.,   0.])), 'distribute': ('translate', array([ 0.,  0.]))}, id='n_161340', value=u'Instead of updating .visible values by hand', p_botleft=P(40.0, 160.0)),
       Node("text", transforms={'align': ('translate', array([-8.,  0.])), 'distribute': ('translate', array([ 0., -6.]))}, id='n_161342', value=u'we can use expressions.', p_botleft=P(37.0, 209.0)),
@@ -274,38 +274,38 @@ root = Node("group", id='root', children = [
       Node("text", id='n_31091', transforms={'align': ('translate', array([-10.,   0.])), 'move': ('translate', array([  2, -28]))}, value=u'Close the program and add to slides.py', p_botleft=P(35.0, 199.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_147744', value=u'this will add three slides to a new document', p_botleft=P(30.0, 481.0)),
       Node("group", transforms={'move': ('translate', array([-1, -7]))}, id='n_148827', children = [
-        Node("text", value="    doc['editor.slides'] = ['slide1', 'slide2', 'slide3']", stroke_color=(0, 0, 1), id='n_147872', font_size=10, font_face='monospace', p_botleft=P(83.0, 435.0)),
-        Node("text", value="    doc['selection.root'] = 'slide1'", stroke_color=(0, 0, 1), id='n_147863', font_size=10, font_face='monospace', p_botleft=P(83.0, 411.0)),
-        Node("text", value='    """))', stroke_color=(0, 0, 1), id='n_147854', font_size=10, font_face='monospace', p_botleft=P(83.0, 387.0)),
-        Node("text", value='      group: id="slide3" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), id='n_147845', font_size=10, font_face='monospace', p_botleft=P(83.0, 363.0)),
-        Node("text", value='      group: id="slide2" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), id='n_147836', font_size=10, font_face='monospace', p_botleft=P(83.0, 339.0)),
-        Node("text", value='      group: id="slide1" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), id='n_147827', font_size=10, font_face='monospace', p_botleft=P(83.0, 315.0)),
-        Node("text", value='    group:', stroke_color=(0, 0, 1), id='n_147818', font_size=10, font_face='monospace', p_botleft=P(83.0, 291.0)),
-        Node("text", value='    doc[\'drawing\'].extend(n("""', stroke_color=(0, 0, 1), id='n_147809', font_size=10, font_face='monospace', p_botleft=P(83.0, 267.0)),
-        Node("text", value="    doc['editor.slide'] = 'slide1'", stroke_color=(0, 0, 1), id='n_147800', font_size=10, font_face='monospace', p_botleft=P(83.0, 243.0)),
-        Node("text", value='if __init__:', stroke_color=(0, 0, 1), id='n_147791', font_size=10, font_face='monospace', p_botleft=P(83.0, 219.0))]),
+        Node("text", font_size=10, value="    doc['editor.slides'] = ['slide1', 'slide2', 'slide3']", stroke_color=(0, 0, 1), font_face='monospace', id='n_147872', p_botleft=P(83.0, 435.0)),
+        Node("text", font_size=10, value="    doc['selection.root'] = 'slide1'", stroke_color=(0, 0, 1), font_face='monospace', id='n_147863', p_botleft=P(83.0, 411.0)),
+        Node("text", font_size=10, value='    """))', stroke_color=(0, 0, 1), font_face='monospace', id='n_147854', p_botleft=P(83.0, 387.0)),
+        Node("text", font_size=10, value='      group: id="slide3" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), font_face='monospace', id='n_147845', p_botleft=P(83.0, 363.0)),
+        Node("text", font_size=10, value='      group: id="slide2" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), font_face='monospace', id='n_147836', p_botleft=P(83.0, 339.0)),
+        Node("text", font_size=10, value='      group: id="slide1" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), font_face='monospace', id='n_147827', p_botleft=P(83.0, 315.0)),
+        Node("text", font_size=10, value='    group:', stroke_color=(0, 0, 1), font_face='monospace', id='n_147818', p_botleft=P(83.0, 291.0)),
+        Node("text", font_size=10, value='    doc[\'drawing\'].extend(n("""', stroke_color=(0, 0, 1), font_face='monospace', id='n_147809', p_botleft=P(83.0, 267.0)),
+        Node("text", font_size=10, value="    doc['editor.slide'] = 'slide1'", stroke_color=(0, 0, 1), font_face='monospace', id='n_147800', p_botleft=P(83.0, 243.0)),
+        Node("text", font_size=10, value='if __init__:', stroke_color=(0, 0, 1), font_face='monospace', id='n_147791', p_botleft=P(83.0, 219.0))]),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  1.]))}, id='n_149518', value=u'Using this method, you will have to recreate', font_size=16.599999999999998, p_botleft=P(28.0, 519.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  4.]))}, id='n_149520', value=u'the content of the first slide (functions can be kept).', font_size=16.599999999999998, p_botleft=P(30.0, 555.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide7', children = [
       Node("text", transforms={'tcenter': ('translate', array([ 47.5,  -2. ]))}, id='title6', value=u'Adding new slides', font_size=34.42175999999999, p_botleft=P(117.0, 97.0)),
       Node("text", id='n_31575', transforms={'align': ('translate', array([-13.,   0.]))}, value=u'Create a function that appends a new group', p_botleft=P(38.0, 154.0)),
       Node("group", transforms={'move': ('translate', array([  -5, -388]))}, id='n_182061', children = [
-        Node("text", value='    change_slide(index - slide_index())', stroke_color=(0, 0, 1), id='n_181640', font_size=10, font_face='monospace', p_botleft=P(106.0, 934.0)),
-        Node("text", value="        doc['editor.slides'].insert(index, new_id)", stroke_color=(0, 0, 1), id='n_181631', font_size=10, font_face='monospace', p_botleft=P(106.0, 910.0)),
-        Node("text", value="        index = doc['editor.slides'].index(before_id)", stroke_color=(0, 0, 1), id='n_181622', font_size=10, font_face='monospace', p_botleft=P(106.0, 886.0)),
-        Node("text", value="        doc['drawing'].multi_insert(index, [slide])", stroke_color=(0, 0, 1), id='n_181613', font_size=10, font_face='monospace', p_botleft=P(106.0, 862.0)),
-        Node("text", value="        index = doc['drawing'].index(doc[before_id])", stroke_color=(0, 0, 1), id='n_181604', font_size=10, font_face='monospace', p_botleft=P(106.0, 838.0)),
-        Node("text", value='    else:', stroke_color=(0, 0, 1), id='n_181595', font_size=10, font_face='monospace', p_botleft=P(106.0, 814.0)),
-        Node("text", value="        index = len(doc['editor.slides']) - 1", stroke_color=(0, 0, 1), id='n_181586', font_size=10, font_face='monospace', p_botleft=P(106.0, 790.0)),
-        Node("text", value="        doc['drawing'].append(slide)", stroke_color=(0, 0, 1), id='n_181577', font_size=10, font_face='monospace', p_botleft=P(106.0, 766.0)),
-        Node("text", value="        doc['editor.slides'].append(new_id)", stroke_color=(0, 0, 1), id='n_181568', font_size=10, font_face='monospace', p_botleft=P(106.0, 742.0)),
-        Node("text", value='    if before_id is None:', stroke_color=(0, 0, 1), id='n_181559', font_size=10, font_face='monospace', p_botleft=P(106.0, 718.0)),
-        Node("text", value="                 visible=exr('`editor.slide == `self.id'))", stroke_color=(0, 0, 1), id='n_181550', font_size=10, font_face='monospace', p_botleft=P(106.0, 694.0)),
-        Node("text", value='    slide = Node("group", id=new_id, t=0,', stroke_color=(0, 0, 1), id='n_181541', font_size=10, font_face='monospace', p_botleft=P(106.0, 670.0)),
-        Node("text", value='    new_id = "slide%s" % (len(doc[\'editor.slides\']) + 1)', stroke_color=(0, 0, 1), id='n_181532', font_size=10, font_face='monospace', p_botleft=P(106.0, 646.0)),
-        Node("text", value='def add_slide(before_id=None):', stroke_color=(0, 0, 1), id='n_181523', font_size=10, font_face='monospace', p_botleft=P(106.0, 622.0))]),
-      Node("text", value=u"to 'drawing' and 'editor.slides'", id='n_183523', p_botleft=P(28.0, 196.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=2, t=0, id='slide18', children = [
+        Node("text", font_size=10, value='    change_slide(index - slide_index())', stroke_color=(0, 0, 1), font_face='monospace', id='n_181640', p_botleft=P(106.0, 934.0)),
+        Node("text", font_size=10, value="        doc['editor.slides'].insert(index, new_id)", stroke_color=(0, 0, 1), font_face='monospace', id='n_181631', p_botleft=P(106.0, 910.0)),
+        Node("text", font_size=10, value="        index = doc['editor.slides'].index(before_id)", stroke_color=(0, 0, 1), font_face='monospace', id='n_181622', p_botleft=P(106.0, 886.0)),
+        Node("text", font_size=10, value="        doc['drawing'].multi_insert(index, [slide])", stroke_color=(0, 0, 1), font_face='monospace', id='n_181613', p_botleft=P(106.0, 862.0)),
+        Node("text", font_size=10, value="        index = doc['drawing'].index(doc[before_id])", stroke_color=(0, 0, 1), font_face='monospace', id='n_181604', p_botleft=P(106.0, 838.0)),
+        Node("text", font_size=10, value='    else:', stroke_color=(0, 0, 1), font_face='monospace', id='n_181595', p_botleft=P(106.0, 814.0)),
+        Node("text", font_size=10, value="        index = len(doc['editor.slides']) - 1", stroke_color=(0, 0, 1), font_face='monospace', id='n_181586', p_botleft=P(106.0, 790.0)),
+        Node("text", font_size=10, value="        doc['drawing'].append(slide)", stroke_color=(0, 0, 1), font_face='monospace', id='n_181577', p_botleft=P(106.0, 766.0)),
+        Node("text", font_size=10, value="        doc['editor.slides'].append(new_id)", stroke_color=(0, 0, 1), font_face='monospace', id='n_181568', p_botleft=P(106.0, 742.0)),
+        Node("text", font_size=10, value='    if before_id is None:', stroke_color=(0, 0, 1), font_face='monospace', id='n_181559', p_botleft=P(106.0, 718.0)),
+        Node("text", font_size=10, value="                 visible=exr('`editor.slide == `self.id'))", stroke_color=(0, 0, 1), font_face='monospace', id='n_181550', p_botleft=P(106.0, 694.0)),
+        Node("text", font_size=10, value='    slide = Node("group", id=new_id, t=0,', stroke_color=(0, 0, 1), font_face='monospace', id='n_181541', p_botleft=P(106.0, 670.0)),
+        Node("text", font_size=10, value='    new_id = "slide%s" % (len(doc[\'editor.slides\']) + 1)', stroke_color=(0, 0, 1), font_face='monospace', id='n_181532', p_botleft=P(106.0, 646.0)),
+        Node("text", font_size=10, value='def add_slide(before_id=None):', stroke_color=(0, 0, 1), font_face='monospace', id='n_181523', p_botleft=P(106.0, 622.0))]),
+      Node("text", id='n_183523', value=u"to 'drawing' and 'editor.slides'", p_botleft=P(28.0, 196.0))]),
+    Node("group", t=0, id='slide18', max_t=2, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 4. ,  9.5]))}, id='title16', value=u'An always visible UI layer', font_size=34.559999999999995, p_botleft=P(67.0, 85.0)),
       Node("text", id='n_163499', transforms={'move': ('translate', array([ 0, 19]))}, value=u'Problem: Our !doc.save() button disappears', p_botleft=P(28.0, 150.0)),
       Node("text", id='n_163523', transforms={'align': ('translate', array([-2.,  0.])), 'move': ('translate', array([ 0, 19]))}, value=u'when changing slides', p_botleft=P(171.0, 194.0)),
@@ -313,55 +313,55 @@ root = Node("group", id='root', children = [
       Node("text", transforms={'align': ('translate', array([-1.,  0.]))}, id='n_165176', value=u"'custom_ui' or similar (visible=True) and", visible=exr('`self.parent.t >= 1'), p_botleft=P(171.0, 307.0)),
       Node("text", transforms={'align': ('translate', array([ 1.,  0.]))}, id='n_165178', value=u'put all buttons there.', visible=exr('`self.parent.t >= 1'), p_botleft=P(170.0, 351.0)),
       Node("group", visible=exr('`self.parent.t >= 2'), transforms={'move': ('translate', array([   1, -197]))}, id='n_226021', children = [
-        Node("text", value='      group: id="slide3" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), id='n_225796', font_size=10, font_face='monospace', p_botleft=P(103.0, 717.0)),
-        Node("text", value='      group: id="slide2" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), id='n_225787', font_size=10, font_face='monospace', p_botleft=P(103.0, 693.0)),
-        Node("text", value='      group: id="slide1" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), id='n_225778', font_size=10, font_face='monospace', p_botleft=P(103.0, 669.0)),
-        Node("text", value='      group: id="custom_ui" visible=True', stroke_color=(0, 0, 1), id='n_225769', font_size=10, font_face='monospace', p_botleft=P(103.0, 645.0)),
-        Node("text", value=u'    group: id="drawing"', stroke_color=(0, 0, 1), id='n_225760', font_size=10, font_face='monospace', p_botleft=P(103.0, 621.0))]),
+        Node("text", font_size=10, value='      group: id="slide3" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), font_face='monospace', id='n_225796', p_botleft=P(103.0, 717.0)),
+        Node("text", font_size=10, value='      group: id="slide2" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), font_face='monospace', id='n_225787', p_botleft=P(103.0, 693.0)),
+        Node("text", font_size=10, value='      group: id="slide1" visible=exr(\'`editor.slide == `self.id\')', stroke_color=(0, 0, 1), font_face='monospace', id='n_225778', p_botleft=P(103.0, 669.0)),
+        Node("text", font_size=10, value='      group: id="custom_ui" visible=True', stroke_color=(0, 0, 1), font_face='monospace', id='n_225769', p_botleft=P(103.0, 645.0)),
+        Node("text", font_size=10, value=u'    group: id="drawing"', stroke_color=(0, 0, 1), font_face='monospace', id='n_225760', p_botleft=P(103.0, 621.0))]),
       Node("text", transforms={'align': ('translate', array([-2.,  0.]))}, id='n_226379', value=u'The result should look like', visible=exr('`self.parent.t >= 2'), p_botleft=P(33.0, 394.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=2, t=0, id='slide19', children = [
+    Node("group", t=0, id='slide19', max_t=2, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-40.5,  -5.5]))}, id='title17', value=u'UI layer interaction', font_size=34.559999999999995, p_botleft=P(191.0, 100.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_226660', value=u'run_button, grab_point and other functions', p_botleft=P(28.0, 163.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -7.]))}, id='n_226662', value=u'should be changes so we can always interact', p_botleft=P(29.0, 213.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -9.]))}, id='n_226664', value=u"with 'custom_ui' when it is visible.", p_botleft=P(29.0, 258.0)),
-      Node("text", visible=exr('`self.parent.t >= 1'), id='n_228542', value=u'For example, the start of run_button could be', p_botleft=P(30.0, 301.0)),
+      Node("text", id='n_228542', value=u'For example, the start of run_button could be', visible=exr('`self.parent.t >= 1'), p_botleft=P(30.0, 301.0)),
       Node("group", visible=exr('`self.parent.t >= 1'), transforms={'move': ('translate', array([ -82, -288]))}, id='n_228988', children = [
-        Node("text", value='    for child in itertools.chain(cui, reversed(root)):', stroke_color=(0, 0, 1), id='n_228811', font_size=10, font_face='monospace', p_botleft=P(142.0, 718.0)),
-        Node("text", value="    cui = doc['custom_ui'] if default_get(doc['custom_ui'], 'visible') else []", stroke_color=(0, 0, 1), id='n_228802', font_size=10, font_face='monospace', p_botleft=P(142.0, 694.0)),
-        Node("text", value='    txy = doc["editor.mouse_txy"]', stroke_color=(0, 0, 1), id='n_228793', font_size=10, font_face='monospace', p_botleft=P(142.0, 670.0)),
-        Node("text", value='    root = doc[doc["selection.root"]]', stroke_color=(0, 0, 1), id='n_228784', font_size=10, font_face='monospace', p_botleft=P(142.0, 646.0)),
-        Node("text", value='def run_button():', stroke_color=(0, 0, 1), id='n_228775', font_size=10, font_face='monospace', p_botleft=P(142.0, 622.0))]),
-      Node("text", visible=exr('`self.parent.t >= 2'), id='n_230052', value=u"Now move !doc.save() to be a child of 'custom_ui'", p_botleft=P(28.0, 476.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=3, t=0, id='slide20', children = [
+        Node("text", font_size=10, value='    for child in itertools.chain(cui, reversed(root)):', stroke_color=(0, 0, 1), font_face='monospace', id='n_228811', p_botleft=P(142.0, 718.0)),
+        Node("text", font_size=10, value="    cui = doc['custom_ui'] if default_get(doc['custom_ui'], 'visible') else []", stroke_color=(0, 0, 1), font_face='monospace', id='n_228802', p_botleft=P(142.0, 694.0)),
+        Node("text", font_size=10, value='    txy = doc["editor.mouse_txy"]', stroke_color=(0, 0, 1), font_face='monospace', id='n_228793', p_botleft=P(142.0, 670.0)),
+        Node("text", font_size=10, value='    root = doc[doc["selection.root"]]', stroke_color=(0, 0, 1), font_face='monospace', id='n_228784', p_botleft=P(142.0, 646.0)),
+        Node("text", font_size=10, value='def run_button():', stroke_color=(0, 0, 1), font_face='monospace', id='n_228775', p_botleft=P(142.0, 622.0))]),
+      Node("text", id='n_230052', value=u"Now move !doc.save() to be a child of 'custom_ui'", visible=exr('`self.parent.t >= 2'), p_botleft=P(28.0, 476.0))]),
+    Node("group", t=0, id='slide20', max_t=3, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 88. ,  -5.5]))}, id='title18', value=u'Moving', font_size=41.471999999999994, p_botleft=P(197.0, 104.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_230482', value=u'Go ahead and make a few slides adding some', p_botleft=P(29.0, 154.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -7.]))}, id='n_230484', value=u'buttons to custom_ui along the way.', p_botleft=P(28.0, 204.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -19.]))}, id='n_230486', value=u'Sometimes, you may want to move or copy', visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 259.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -25.]))}, id='n_230488', value=u"elements to a different slide (or to 'custom_ui')", visible=exr('`self.parent.t >= 1'), p_botleft=P(29.0, 308.0)),
       Node("group", visible=exr('`self.parent.t >= 2'), transforms={'move': ('translate', array([ -12, -213]))}, id='n_230948', children = [
-        Node("text", value='def move_to_layer():', stroke_color=(0, 0, 1), id='n_230490', font_size=10, font_face='monospace', p_botleft=P(131.0, 624.0)),
-        Node("text", value="        doc[doc['selection.root']].append(ref['ref'])", stroke_color=(0, 0, 1), id='n_230508', font_size=10, font_face='monospace', p_botleft=P(131.0, 672.0)),
-        Node("text", value="    for ref in doc['editor.selection']:", stroke_color=(0, 0, 1), id='n_230499', font_size=10, font_face='monospace', p_botleft=P(131.0, 648.0))]),
+        Node("text", font_size=10, value='def move_to_layer():', stroke_color=(0, 0, 1), font_face='monospace', id='n_230490', p_botleft=P(131.0, 624.0)),
+        Node("text", font_size=10, value="        doc[doc['selection.root']].append(ref['ref'])", stroke_color=(0, 0, 1), font_face='monospace', id='n_230508', p_botleft=P(131.0, 672.0)),
+        Node("text", font_size=10, value="    for ref in doc['editor.selection']:", stroke_color=(0, 0, 1), font_face='monospace', id='n_230499', p_botleft=P(131.0, 648.0))]),
       Node("text", transforms={'distribute': ('translate', array([  0., -31.]))}, id='n_231405', value=u'Instead of a clipboard, we will just move or copy', visible=exr('`self.parent.t >= 2'), p_botleft=P(28.0, 357.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -29.]))}, id='n_231407', value=u'the current selection.', visible=exr('`self.parent.t >= 2'), p_botleft=P(30.0, 398.0)),
-      Node("text", visible=exr('`self.parent.t >= 3'), id='n_234094', value=u'Bind this function to some key', p_botleft=P(31.0, 506.0)),
-      Node("text", visible=exr('`self.parent.t >= 3'), id='n_236586', value=u"Don't forget to reload (ctrl-r)", p_botleft=P(31.0, 556.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=1, t=0, id='slide21', children = [
+      Node("text", id='n_234094', value=u'Bind this function to some key', visible=exr('`self.parent.t >= 3'), p_botleft=P(31.0, 506.0)),
+      Node("text", id='n_236586', value=u"Don't forget to reload (ctrl-r)", visible=exr('`self.parent.t >= 3'), p_botleft=P(31.0, 556.0))]),
+    Node("group", t=0, id='slide21', max_t=1, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 86.5,   0.5]))}, id='title19', value=u'Copying', font_size=41.471999999999994, p_botleft=P(186.0, 98.0)),
       Node("text", transforms={'align': ('translate', array([-13.,   0.]))}, id='n_234464', value=u'Select and paste is similar', p_botleft=P(42.0, 159.0)),
       Node("group", transforms={'move': ('translate', array([  -9, -435]))}, id='n_235025', children = [
-        Node("text", value='        selection_add(doc, node)', stroke_color=(0, 0, 1), id='n_234520', font_size=10, font_face='monospace', p_botleft=P(127.0, 777.0)),
-        Node("text", value='    for node in copies:', stroke_color=(0, 0, 1), id='n_234511', font_size=10, font_face='monospace', p_botleft=P(127.0, 753.0)),
-        Node("text", value="        selection_del(doc, ref['ref'])", stroke_color=(0, 0, 1), id='n_234502', font_size=10, font_face='monospace', p_botleft=P(127.0, 729.0)),
-        Node("text", value="    for ref in doc['selection']:", stroke_color=(0, 0, 1), id='n_234493', font_size=10, font_face='monospace', p_botleft=P(127.0, 705.0)),
-        Node("text", value="    doc[doc['selection.root']].extend(copies)", stroke_color=(0, 0, 1), id='n_234484', font_size=10, font_face='monospace', p_botleft=P(127.0, 681.0)),
-        Node("text", value="    copies = [ref['ref'].deepcopy() for ref in doc['selection']]", stroke_color=(0, 0, 1), id='n_234475', font_size=10, font_face='monospace', p_botleft=P(127.0, 657.0)),
-        Node("text", value='def paste_selection():', stroke_color=(0, 0, 1), id='n_234466', font_size=10, font_face='monospace', p_botleft=P(127.0, 633.0))]),
+        Node("text", font_size=10, value='        selection_add(doc, node)', stroke_color=(0, 0, 1), font_face='monospace', id='n_234520', p_botleft=P(127.0, 777.0)),
+        Node("text", font_size=10, value='    for node in copies:', stroke_color=(0, 0, 1), font_face='monospace', id='n_234511', p_botleft=P(127.0, 753.0)),
+        Node("text", font_size=10, value="        selection_del(doc, ref['ref'])", stroke_color=(0, 0, 1), font_face='monospace', id='n_234502', p_botleft=P(127.0, 729.0)),
+        Node("text", font_size=10, value="    for ref in doc['selection']:", stroke_color=(0, 0, 1), font_face='monospace', id='n_234493', p_botleft=P(127.0, 705.0)),
+        Node("text", font_size=10, value="    doc[doc['selection.root']].extend(copies)", stroke_color=(0, 0, 1), font_face='monospace', id='n_234484', p_botleft=P(127.0, 681.0)),
+        Node("text", font_size=10, value="    copies = [ref['ref'].deepcopy() for ref in doc['selection']]", stroke_color=(0, 0, 1), font_face='monospace', id='n_234475', p_botleft=P(127.0, 657.0)),
+        Node("text", font_size=10, value='def paste_selection():', stroke_color=(0, 0, 1), font_face='monospace', id='n_234466', p_botleft=P(127.0, 633.0))]),
       Node("text", transforms={'align': ('translate', array([-1.,  0.])), 'distribute': ('translate', array([ 0.,  0.]))}, id='n_235711', value=u'Bind this to a key as well', p_botleft=P(28.0, 406.0)),
       Node("text", transforms={'align': ('translate', array([-1.,  0.])), 'distribute': ('translate', array([  0., -14.]))}, id='n_236588', value=u'Test this:', visible=exr('`self.parent.t >= 1'), p_botleft=P(31.0, 463.0)),
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([  0., -19.]))}, value=u'- Select elements in one slide (s)', id='n_236590', font_size=16.599999999999998, p_botleft=P(29.0, 507.0)),
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([  0., -15.]))}, value=u'- Change slides and call move_to_layer() or paste_selection()', id='n_236592', font_size=16.599999999999998, p_botleft=P(29.0, 542.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=6, t=0, id='slide24', children = [
+    Node("group", t=0, id='slide24', max_t=6, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-58. , -10.5]))}, id='title22', value=u'Helper functions', font_size=41.471999999999994, p_botleft=P(201.0, 109.0)),
       Node("text", id='n_469674', transforms={'distribute': ('translate', array([ 0.,  0.]))}, value=u"Here's some other helper functions you may", p_botleft=P(27.0, 166.0)),
       Node("text", id='n_469676', transforms={'distribute': ('translate', array([ 0., -3.]))}, value=u'want to add at some point (without instructions)', p_botleft=P(29.0, 212.0)),
@@ -371,22 +371,22 @@ root = Node("group", id='root', children = [
       Node("text", transforms={'distribute': ('translate', array([  0., -15.]))}, id='n_470075', value=u'position (relative to its bounding box).', visible=exr('`self.parent.t >= 1'), p_botleft=P(48.0, 308.0)),
       Node("text", visible=exr('`self.parent.t >= 4'), transforms={'distribute': ('translate', array([  0., -20.]))}, value=u'- Align text intended for bullet points to fixed coordniates', id='n_470077', font_size=16.599999999999998, p_botleft=P(29.0, 440.0)),
       Node("text", transforms={'distribute': ('translate', array([  0., -19.]))}, id='n_470100', value=u'- Change stroke and/or fill of the selection', visible=exr('`self.parent.t >= 5'), p_botleft=P(29.0, 482.0)),
-      Node("text", id='n_528923', value=u"- Add a '=`editor.slide' text to show the current slide", font_size=16.533599999999996, visible=exr('`self.parent.t >= 6'), p_botleft=P(32.0, 507.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=2, t=0, id='slide8', children = [
+      Node("text", visible=exr('`self.parent.t >= 6'), value=u"- Add a '=`editor.slide' text to show the current slide", id='n_528923', font_size=16.533599999999996, p_botleft=P(32.0, 507.0))]),
+    Node("group", t=0, id='slide8', max_t=2, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([ 6., -2.]))}, id='title7', value=u'Changing font face', font_size=34.42175999999999, p_botleft=P(145.0, 97.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.]))}, id='n_31780', value=u"We'd like to use a monospace font to show code", p_botleft=P(32.0, 164.0)),
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([ 0.,  1.]))}, value=u"Like font size, font_face isn't part of 'style'", id='n_452041', font_size=16.533599999999996, p_botleft=P(32.0, 202.0)),
       Node("text", visible=exr('`self.parent.t >= 1'), transforms={'distribute': ('translate', array([ 0., -4.]))}, value=u'and each individual text element has to be updated', id='n_452043', font_size=16.599999999999998, p_botleft=P(32.0, 246.0)),
       Node("group", visible=exr('`self.parent.t >= 1'), transforms={'move': ('translate', array([   1, -337]))}, id='n_452442', children = [
-        Node("text", value="                node['font_face'] = new_font", stroke_color=(0, 0, 1), id='n_452253', font_size=10, font_face='monospace', p_botleft=P(132.0, 716.0)),
-        Node("text", value='            if node.name == "text":', stroke_color=(0, 0, 1), id='n_452244', font_size=10, font_face='monospace', p_botleft=P(132.0, 692.0)),
-        Node("text", value="        for node, transform in ref['ref'].dfs():", stroke_color=(0, 0, 1), id='n_452235', font_size=10, font_face='monospace', p_botleft=P(132.0, 668.0)),
-        Node("text", value="    for ref in doc['selection']:", stroke_color=(0, 0, 1), id='n_452226', font_size=10, font_face='monospace', p_botleft=P(132.0, 644.0)),
-        Node("text", value='def font_face_change(new_font="monospace"):', stroke_color=(0, 0, 1), id='n_452217', font_size=10, font_face='monospace', p_botleft=P(132.0, 620.0))]),
-      Node("text", id='n_452764', value=u'Try selecting some text and call font_face_change', font_size=16.599999999999998, visible=exr('`self.parent.t >= 2'), p_botleft=P(32.0, 430.0)),
-      Node("text", visible=exr('`self.parent.t >= 2'), id='n_452766', value=u'Some text in normal font', p_botleft=P(174.0, 489.0)),
-      Node("text", id='n_452768', value=u'Some text in monospace font', font_face='monospace', visible=exr('`self.parent.t >= 2'), p_botleft=P(124.0, 537.0))]),
-    Node("group", visible=exr('`editor.slide == `self.id'), max_t=1, t=0, id='slide15', children = [
+        Node("text", font_size=10, value="                node['font_face'] = new_font", stroke_color=(0, 0, 1), font_face='monospace', id='n_452253', p_botleft=P(132.0, 716.0)),
+        Node("text", font_size=10, value='            if node.name == "text":', stroke_color=(0, 0, 1), font_face='monospace', id='n_452244', p_botleft=P(132.0, 692.0)),
+        Node("text", font_size=10, value="        for node, transform in ref['ref'].dfs():", stroke_color=(0, 0, 1), font_face='monospace', id='n_452235', p_botleft=P(132.0, 668.0)),
+        Node("text", font_size=10, value="    for ref in doc['selection']:", stroke_color=(0, 0, 1), font_face='monospace', id='n_452226', p_botleft=P(132.0, 644.0)),
+        Node("text", font_size=10, value='def font_face_change(new_font="monospace"):', stroke_color=(0, 0, 1), font_face='monospace', id='n_452217', p_botleft=P(132.0, 620.0))]),
+      Node("text", visible=exr('`self.parent.t >= 2'), value=u'Try selecting some text and call font_face_change', id='n_452764', font_size=16.599999999999998, p_botleft=P(32.0, 430.0)),
+      Node("text", id='n_452766', value=u'Some text in normal font', visible=exr('`self.parent.t >= 2'), p_botleft=P(174.0, 489.0)),
+      Node("text", visible=exr('`self.parent.t >= 2'), value=u'Some text in monospace font', id='n_452768', font_face='monospace', p_botleft=P(124.0, 537.0))]),
+    Node("group", t=0, id='slide15', max_t=1, visible=exr('`editor.slide == `self.id'), children = [
       Node("text", transforms={'tcenter': ('translate', array([-23. ,  -9.5]))}, id='title13', value=u'Adding transitions', font_size=34.559999999999995, p_botleft=P(188.0, 104.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0.,  0.])), 'move': ('translate', array([  2, -11]))}, id='n_162453', value=u'For bullet points and other part of the slide to appear', font_size=16.599999999999998, p_botleft=P(28.0, 169.0)),
       Node("text", transforms={'distribute': ('translate', array([ 0., -6.])), 'move': ('translate', array([  2, -11]))}, id='n_162455', value=u'when the arrow keys are pressed, set the visibility of', font_size=16.599999999999998, p_botleft=P(29.0, 214.0)),
@@ -404,15 +404,15 @@ root = Node("group", id='root', children = [
       Node("text", id='n_464624', transforms={'distribute': ('translate', array([ 0., -2.]))}, value=u'max_t is reached (and switch to the next slide', p_botleft=P(25.0, 211.0)),
       Node("text", id='n_464626', transforms={'distribute': ('translate', array([  0., -10.]))}, value=u'when that happens)', p_botleft=P(27.0, 262.0)),
       Node("group", transforms={'move': ('translate', array([ -29, -336]))}, id='n_467232', children = [
-        Node("text", value="        slide['t'] = max(0, slide['t'] + diff)", stroke_color=(0, 0, 1), id='n_467015', font_size=10, font_face='monospace', p_botleft=P(155.0, 813.0)),
-        Node("text", value='    else:', stroke_color=(0, 0, 1), id='n_467006', font_size=10, font_face='monospace', p_botleft=P(155.0, 789.0)),
-        Node("text", value='        change_slide(-1)', stroke_color=(0, 0, 1), id='n_466997', font_size=10, font_face='monospace', p_botleft=P(155.0, 765.0)),
-        Node("text", value="    elif diff < 0 and slide['t'] == 0:", stroke_color=(0, 0, 1), id='n_466988', font_size=10, font_face='monospace', p_botleft=P(155.0, 741.0)),
-        Node("text", value='        change_slide(1)', stroke_color=(0, 0, 1), id='n_466979', font_size=10, font_face='monospace', p_botleft=P(155.0, 717.0)),
-        Node("text", value="    if diff > 0 and slide['t'] >= slide.get('max_t', 0):", stroke_color=(0, 0, 1), id='n_466970', font_size=10, font_face='monospace', p_botleft=P(155.0, 693.0)),
-        Node("text", value="    slide = doc[doc['editor.slide']]", stroke_color=(0, 0, 1), id='n_466961', font_size=10, font_face='monospace', p_botleft=P(155.0, 669.0)),
-        Node("text", value='    diff = int(diff)', stroke_color=(0, 0, 1), id='n_466952', font_size=10, font_face='monospace', p_botleft=P(155.0, 645.0)),
-        Node("text", value='def slide_transition(diff=1):', stroke_color=(0, 0, 1), id='n_466943', font_size=10, font_face='monospace', p_botleft=P(155.0, 621.0))]),
+        Node("text", font_size=10, value="        slide['t'] = max(0, slide['t'] + diff)", stroke_color=(0, 0, 1), font_face='monospace', id='n_467015', p_botleft=P(155.0, 813.0)),
+        Node("text", font_size=10, value='    else:', stroke_color=(0, 0, 1), font_face='monospace', id='n_467006', p_botleft=P(155.0, 789.0)),
+        Node("text", font_size=10, value='        change_slide(-1)', stroke_color=(0, 0, 1), font_face='monospace', id='n_466997', p_botleft=P(155.0, 765.0)),
+        Node("text", font_size=10, value="    elif diff < 0 and slide['t'] == 0:", stroke_color=(0, 0, 1), font_face='monospace', id='n_466988', p_botleft=P(155.0, 741.0)),
+        Node("text", font_size=10, value='        change_slide(1)', stroke_color=(0, 0, 1), font_face='monospace', id='n_466979', p_botleft=P(155.0, 717.0)),
+        Node("text", font_size=10, value="    if diff > 0 and slide['t'] >= slide.get('max_t', 0):", stroke_color=(0, 0, 1), font_face='monospace', id='n_466970', p_botleft=P(155.0, 693.0)),
+        Node("text", font_size=10, value="    slide = doc[doc['editor.slide']]", stroke_color=(0, 0, 1), font_face='monospace', id='n_466961', p_botleft=P(155.0, 669.0)),
+        Node("text", font_size=10, value='    diff = int(diff)', stroke_color=(0, 0, 1), font_face='monospace', id='n_466952', p_botleft=P(155.0, 645.0)),
+        Node("text", font_size=10, value='def slide_transition(diff=1):', stroke_color=(0, 0, 1), font_face='monospace', id='n_466943', p_botleft=P(155.0, 621.0))]),
       Node("text", id='n_467602', transforms={'distribute': ('translate', array([ 0.,  0.]))}, value=u"We've included the backwards transition (diff=-1)", p_botleft=P(29.0, 523.0)),
       Node("text", id='n_467604', transforms={'distribute': ('translate', array([ 0., -6.]))}, value=u'in the same function.', p_botleft=P(27.0, 572.0))]),
     Node("group", visible=exr('`editor.slide == `self.id'), t=0, id='slide26', children = [
@@ -436,15 +436,15 @@ root = Node("group", id='root', children = [
       Node("text", transforms={'distribute': ('translate', array([  0., -21.]))}, id='n_492842', value=u'send us a link to your slides', stroke_color=(0, 0.6, 0), p_botleft=P(151.0, 286.0)),
       Node("text", id='n_492844', transforms={'distribute': ('translate', array([ 0., -3.]))}, value=u'version of these slides from these instructions,', p_botleft=P(30.0, 224.0)),
       Node("text", id='n_493166', transforms={'distribute': ('translate', array([  0., -19.]))}, value=u'so it can be added to the readme.', p_botleft=P(30.0, 326.0)),
-      Node("text", font_size=13.777999999999997, id='n_497356', value=u"(Don't forget to include both saved_doc.py and examples/myslides.py)", p_botleft=P(32.0, 355.0))])]),
+      Node("text", id='n_497356', value=u"(Don't forget to include both saved_doc.py and examples/myslides.py)", font_size=13.777999999999997, p_botleft=P(32.0, 355.0))])]),
   Node("group", id='ui', children = [
-    Node("group", slide='slide1', selected=pmap({}), gui_selected=exr('`n_2886'), slides=['slide1', 'slide4', 'slide9', 'slide10', 'slide22', 'slide2', 'slide5', 'slide11', 'slide25', 'slide16', 'slide3', 'slide12', 'slide13', 'slide14', 'slide6', 'slide7', 'slide18', 'slide19', 'slide20', 'slide21', 'slide24', 'slide8', 'slide15', 'slide23', 'slide26', 'slide17'], grabbed=None, mouse_txy=array([ 312.,  601.]), key_name='I', id='editor', mouse_xy=array([312, 601]), window_size=P(800, 600), key_mods=['Shift', 'NumLock'], key_char='I', focus='n_4351', drag_start=None, stroke_color=(0, 0.5, 0), callbacks=pmap({}), mode='edit', p_lastxy=P(0, 0), children = [
+    Node("group", grabbed=None, focus='n_503189', callbacks=pmap({}), slide='slide1', key_mods=['mod2'], mouse_txy=P(773.0, 397.0), key_name='page_up', selected=pmap({}), mode='edit', gui_selected=exr('`n_2886'), slides=['slide1', 'slide4', 'slide9', 'slide10', 'slide22', 'slide2', 'slide5', 'slide11', 'slide25', 'slide16', 'slide3', 'slide12', 'slide13', 'slide14', 'slide6', 'slide7', 'slide18', 'slide19', 'slide20', 'slide21', 'slide24', 'slide8', 'slide15', 'slide23', 'slide26', 'slide17'], key_char='', mouse_xy=P(773, 397), id='editor', stroke_color=(0, 0.5, 0), drag_start=None, window_size=P(800, 600), p_lastxy=P(0, 0), children = [
       Node("path", stroke_color=(0, 0.5, 0), id='n_3'),
-      Node("text", value=None, id='n_4', botleft=exr('`self.parent.lastxy'))]),
+      Node("text", id='n_4', value=None, botleft=exr('`self.parent.lastxy'))]),
     Node("group", transforms=exr('`drawing.transforms'), id='overlay', children = [
       Node("group", root='slide1', id='selection'),
-      Node("group", dash=([5, 5], 0), stroke_color=(0.5, 0, 0), id='selection_bbox', skip_points=True, children = [
-        Node("path", topright=exr('topright(`self.corners)'), corners=exc('(`selection).bbox()'), visible=exc('len(`selection) > 1'), id='n_10', botleft=exr('botleft(`self.corners)'), p_botright=exr('`self.parent.corners[1]'), p_topleft=exr('`self.parent.corners[0]'), children = [
+      Node("group", skip_points=True, id='selection_bbox', dash=([5, 5], 0), stroke_color=(0.5, 0, 0), children = [
+        Node("path", visible=exc('len(`selection) > 1'), corners=exc('(`selection).bbox()'), topright=exr('topright(`self.corners)'), id='n_10', botleft=exr('botleft(`self.corners)'), p_botright=exr('`self.parent.corners[1]'), p_topleft=exr('`self.parent.corners[0]'), children = [
           Node("line", start=exr('`self.parent.topleft'), end=exr('`self.parent.topright'), id='n_6'),
           Node("line", start=exr('`self.parent.topright'), end=exr('`self.parent.botright'), id='n_7'),
           Node("line", start=exr('`self.parent.botright'), end=exr('`self.parent.botleft'), id='n_8'),
